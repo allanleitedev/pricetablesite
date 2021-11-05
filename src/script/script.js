@@ -253,7 +253,7 @@ async function obtainProdvar(code){
 
         for (i=0; i<100;i++){
             document.querySelector(".tabela > table > tbody").innerHTML += 
-            `<tr><td>${oneprodvar[i].prodvcode}</td><td>${oneprodvar[i].prodvdesc}</td><td>${oneprodvar[i].prodvinfo}</td><td>R$${oneprodvar[i].prodvpreco}</td></tr>`
+            `<tr><td>${oneprodvar[i].prodvcode}</td><td>${oneprodvar[i].prodvdesc}</td><td>${oneprodvar[i].prodvinfo}</td><td>${oneprodvar[i].prodvpreco}</td></tr>`
         }
 
         expandModal();
