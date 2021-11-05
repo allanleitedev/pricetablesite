@@ -241,7 +241,7 @@ async function obtainProdvar(code){
                 console.log(`${onevaria[j].vartipo} --- ${unitipos[i]} || ${typeof(onevaria[j].vartipo)} --  ${typeof(unitipos[i])}`)
                 if(onevaria[j].vartipo == unitipos[i]){
                     var lista = document.querySelector(`.lista_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')} > div`)
-                    lista.innerHTML += `<p onclick="selecionaVar('${unitipos[i]}','${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}')" class="opt_${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}"><span>${onevaria[j].varcode} | </span>${onevaria[j].vardesc}</p>`
+                    lista.innerHTML += `<p onclick="selecionaVar('${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}','${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}')" class="opt_${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}"><span>${onevaria[j].varcode} | </span>${onevaria[j].vardesc}</p>`
                 }
             }        
         }
