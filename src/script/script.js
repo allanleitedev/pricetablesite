@@ -293,7 +293,7 @@ async function obtainProdvar(code){
             for (i=0; i<oneprodvar.length;i++){
                 console.log("teste" + oneprodvar[i])
                 document.querySelector(".tabela > table > tbody").innerHTML += 
-                `<tr><td>${oneprodvar[i].prodvcode}</td><td>${oneprodvar[i].prodvdesc}</td><td>${oneprodvar[i].prodvinfo}</td>R$<td>${oneprodvar[i].prodvpreco}</td></tr>`
+                `<tr><td>${oneprodvar[i].prodvcode}</td><td>${oneprodvar[i].prodvdesc}</td><td>${oneprodvar[i].prodvinfo}</td><td>${oneprodvar[i].prodvpreco}</td></tr>`
             }
             downloadTable()
 
