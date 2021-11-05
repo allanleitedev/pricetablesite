@@ -1,0 +1,561 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*RESET CSS -- -- */
+
+/* VARIABLES */
+
+:root {
+    --cor-bg: #f1f2f6;
+    --cor-dark: #2f3542;
+    --cor-light: #f9f9f9;
+    --cor-midle: #ced6e0;
+    --white: #fff;
+    --black: #000;
+  }
+/* FONTS */
+/* ROBOTO MONO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap');
+
+/*-----------------------*/
+
+body{
+    background-color: var(--cor-bg);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: thin 100;
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+    align-items: center;
+    background-color: var(--cor-dark);
+    color: var(--cor-bg)
+}
+
+nav > div{
+    display: flex;
+    align-items: center;
+}
+
+nav > div > span{
+    margin: 0px 10px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    height: 40px;
+    opacity:0.6;
+    transition: 0.5s;
+}
+.logo img:hover{
+    opacity:1;
+}
+
+.familia{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--cor-dark);
+}
+
+.more{
+    font-size: 3rem;
+    font-weight: 100;
+    margin-right: 50px;
+}
+
+.familia div{
+    display: flex;
+    justify-content: center;
+    min-height: 80px;
+    max-width: 80px;
+    min-width: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.familia img{
+    height: 80px;
+}
+
+.familia h1{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-left: 50px;
+    font-size: 1.5rem;
+
+}
+
+.familia p {
+    white-space: nowrap;
+}
+
+.obtcod{
+    border: none;
+    background-color: var(--cor-dark);
+    color: var(--cor-midle);
+    border-radius: 5px;
+    font-family: 'Roboto';
+    padding: 5px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.obtcod:hover{
+    color:var(--cor-dark);
+    border:1px solid var(--cor-dark);
+    background: rgba(0, 0, 0, 0.1);
+
+}
+
+.familia span{
+    transition: 0.5s;
+}
+
+.familia span:hover{
+    cursor: pointer;
+    transform: translateY(-5px) ;
+}
+ul{
+    width: 100%;
+    padding: 0px 30px;
+}
+
+ li {
+     visibility: hidden;
+     display: flex;
+     transition: opacity 1s ease-out,background-color 0.3s;
+     justify-content: space-between;
+     width: 100%;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     padding: 0px;
+     background: rgba(255, 255, 255, 0.5);
+     cursor: pointer;
+     opacity: 0;
+     height: 0;
+    overflow: hidden;
+    align-items: center;
+ }
+
+ li:hover{
+     background-color: var(--cor-bg);
+ }
+
+ li h2{
+     width: 100%;
+ }
+
+ li span {
+     margin: 0px 10px;
+     white-space: nowrap;
+     border-left: 1px solid var(--cor-dark);
+     height: 100%;
+     display: flex;
+     align-items: center;
+     padding-left: 10px;
+ }
+
+ li span img{
+     height: 25px;
+ }
+
+ .mostrali{
+     display: flex!important;
+ }
+
+ #modal{
+    visibility: hidden;
+     width: 95vw;
+     position: absolute;
+     background-color: rgba(255, 255, 255, 0.9);
+     box-shadow: 0px 0px 200px rgba(0, 0, 0, 0.5);
+     z-index: 1000;
+     border-radius: 20px;
+     margin: auto;
+     background: rgba( 255, 255, 255, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition:visibility 0s, opacity 0.6s ease-out;
+    opacity: 0;
+ }
+
+ #closemodal{
+     display: flex;
+     position: absolute;
+     width: 30px;
+     height: 30px;
+     right: 10px;
+     top: 8px;
+     color: var(--cor-dark);
+     cursor: pointer;
+     transition: 0.5s;
+     background-color: rgba(0, 0, 0, 0.1);
+     border-radius: 50%;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #closemodal:hover{
+    color: rgb(238, 83, 83);
+     background-color: transparent;
+     border: 1px solid rgb(238, 83, 83) ;
+ }
+
+ #produto{
+     display: flex;
+     margin: 50px;
+     height: 200px;
+     align-items: center;
+     font-size: 2.5rem;
+     justify-content: space-between;
+ }
+
+ #produto p{
+     margin: 0px 20px;
+ }
+
+ .foto{
+     height: 100%;
+     border-radius: 10px;
+     overflow: hidden;
+     margin-right: 50px;
+ }
+
+ .foto img{
+    height: 100%;
+ }
+
+ .infos{
+     display: flex;
+     flex-direction: column;
+     width: 300px;
+ }
+
+ .contacab{
+     display: flex;
+     flex-wrap: wrap;
+     font-size: 1.5rem;
+     text-align: center;
+     justify-content: center;
+ }
+
+ .contacab p{
+     width: 100%;
+     padding: 10px;
+ }
+ .infos span{
+
+     margin: 10px;
+ }
+
+ .geral{
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 1px solid var(--cor-midle);
+ }
+
+ .contacab div{
+     margin: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+ }
+
+ .obter{
+     display: flex;
+     align-items: center;
+     width: 200px;
+     font-size: 1.3rem;
+     background-color: var(--cor-dark);
+     color: var(--cor-light);
+     padding: 10px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .obter > span{
+     margin: 10px;
+ }
+
+ .obter:hover{
+     background-color: var(--cor-midle);
+     color: var(--cor-dark);
+ }
+
+ #variacao{
+     display: flex;
+     justify-content: center;
+     padding: 30px;
+     border-top:1px solid var(--cor-midle);
+ }
+
+ #variacao > div{
+     display: flex;
+     justify-content: center;
+    margin: 0px 50px;
+    background-color: var(--cor-dark);
+    color: var(--cor-bg);
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+ }
+
+ #variacao > div:hover{
+     background-color: var(--cor-midle);
+     color: var(--cor-dark);
+ }
+
+ #variacao > div > div{
+     color: var(--cor-dark);
+     position: absolute;
+     top: 50px;
+     background-color: var(--cor-midle);
+     border-radius: 10px;
+     overflow:auto;
+     max-height: 400px;
+     visibility: hidden;
+ }
+
+ #variacao > div > div p{
+     padding: 10px;
+     transition: 0.3s ease-out;
+ }
+
+ #variacao > div > div p:hover{
+
+    background-color: var(--cor-dark);
+    color: var(--cor-bg);
+
+ }
+
+ #variacao p {
+     white-space: nowrap;
+     padding: 5px;
+ }
+
+ .busca{
+     display: flex;
+     font-size: 1.5rem;
+     justify-content: space-around;
+     padding: 0px 50px;
+     border-top:1px solid var(--cor-midle);
+     align-items: center;
+ }
+
+ .busca > div{
+     margin: 20px;
+ }
+
+ .btnbusca{
+     background-color: var(--cor-dark);
+     color: var(--cor-bg);
+     padding: 10px;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: 0.5s ease-out;
+ }
+
+ .btnbusca:hover{
+     background-color: var(--cor-midle);
+     color: var(--cor-dark);
+ }
+
+ .precobusca{
+     color: rgb(15, 133, 0);
+ }
+
+ .tabela{
+     width: 100%;
+     padding: 50px;
+     max-height: 300px;
+     overflow: auto;
+     border-top:1px solid var(--cor-midle);
+ }
+
+ .tabela > table{
+     width: 100%;
+ }
+
+ .tabela table th{
+     padding: 10px;
+     background-color: var(--cor-midle);
+     border-radius: 10px;
+     margin: 10px;
+ }
+ .tabela table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--cor-midle);
+}
+
+#load{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 500px #000;
+}
+ /*----------------------------------CORES DE ACABAMENTO---------------------------*/
+ .branco{
+    background: #fff;
+}
+
+.preto{
+    background: #000;
+}
+
+.amarelo{
+ background: #ffc940;
+}
+
+.verdesalvia{
+
+    background: #669887;
+}
+.ameixa{
+
+    background: #dda0dd;
+}
+
+.azul{
+
+    background: #1c51ff;
+}
+
+.vermelho{
+
+    background: #ff2828;
+}
+
+.marromcort{
+
+    background: #964b00;
+}
+
+.marromcort{
+
+    background: #964b00;
+}
+
+.grafite{
+
+    background: #696969;
+}
+.prata{
+
+    background: #c0c0c0;
+}
+.ourovelho{
+
+    background: #c79845;
+}
+
+.dourado{
+
+    background: #e6b12a;
+}
+
+.marrom{
+
+    background: #59362d;
+}
+
+.bronzefosc{
+
+    background: #cd7f32;
+}
+
+.natural{
+
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.3);
+}

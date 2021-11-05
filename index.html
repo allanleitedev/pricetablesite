@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/style/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1>Tabela de Preços</h1>
+        <div>
+            <h2>User</h2>
+            <span class="material-icons"> account_circle </span>
+        </div>
+    </nav>
+    <main>
+        <div id="load">Aguarde o arquivo ser gerado...</div>
+        <div id="modal">
+            <div id="closemodal" onclick="closeModal()">
+                <span class="material-icons-outlined">close</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="logo"><a href="https://lightdesign.com.br/" target="_blank"><img src="src/img/logo-fundo transparente.png" alt=""></a></div>
+    </footer>
+
+    <script type="text/javascript">
+        // Set a cross-site cookie for third-party contexts
+        document.cookie = 'SameSite=None';
+    </script>
+    <script src="src/script/table2excel.js"></script>
+    <script src="src/script/script.js"></script>
+    <script src="src/script/control.js"></script>
+</body>
+</html>
