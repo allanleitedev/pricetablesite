@@ -227,9 +227,9 @@ async function obtainProdvar(code){
         </div>` 
         for (i in unitipos){
                 document.getElementById("variacao").innerHTML +=
-                `<div onclick="expandOptions('${unitipos[i]}')" class="listatop_${unitipos[i]}">
+                `<div onclick="expandOptions('${unitipos[i]}')" class="listatop_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}">
                         <h3>${unitipos[i]}</h3><span class="material-icons-outlined">arrow_drop_down</span>
-                        <div class="lista_${unitipos[i]}">
+                        <div class="lista_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}">
                             <div class="options"></div>
                         </div>
                 </div>`
@@ -240,7 +240,7 @@ async function obtainProdvar(code){
                 console.log(onevaria[j].vartipo == unitipos[i])
                 console.log(`${onevaria[j].vartipo} --- ${unitipos[i]} || ${typeof(onevaria[j].vartipo)} --  ${typeof(unitipos[i])}`)
                 if(onevaria[j].vartipo == unitipos[i]){
-                    var lista = document.querySelector(`.lista_${unitipos[i]} > div`)
+                    var lista = document.querySelector(`.lista_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')} > div`)
                     lista.innerHTML += `<p onclick="selecionaVar('${unitipos[i]}','${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}')" class="opt_${onevaria[j].vardesc.replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}"><span>${onevaria[j].varcode} | </span>${onevaria[j].vardesc}</p>`
                 }
             }        
