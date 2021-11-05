@@ -227,7 +227,7 @@ async function obtainProdvar(code){
         </div>` 
         for (i in unitipos){
                 document.getElementById("variacao").innerHTML +=
-                `<div onclick="expandOptions('${unitipos[i]}')" class="listatop_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}">
+                `<div onclick="expandOptions('${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}')" class="listatop_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}">
                         <h3>${unitipos[i]}</h3><span class="material-icons-outlined">arrow_drop_down</span>
                         <div class="lista_${unitipos[i].replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '')}">
                             <div class="options"></div>
