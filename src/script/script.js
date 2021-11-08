@@ -179,25 +179,25 @@ async function obtainProdvar(code){
             </div>
             <div class="obter" onclick="exportToExcel(${oneproduto[0].procode})">Obter Códigos! <span class="material-icons-outlined">file_download</span></div>
         </div>`
-        oneproduto[0].branco == true? document.querySelector(".contacab").innerHTML += `<div class="branco"></div>`:modal.innerHTML +=``
-        oneproduto[0].preto == true? document.querySelector(".contacab").innerHTML += `<div class="preto"></div>`:modal.innerHTML +=``
-        oneproduto[0].grafite == true? document.querySelector(".contacab").innerHTML += `<div class="grafite"></div>`:modal.innerHTML +=``
-        oneproduto[0].prata == true? document.querySelector(".contacab").innerHTML += `<div class="prata"></div>`:modal.innerHTML +=``
-        oneproduto[0].marrom == true? document.querySelector(".contacab").innerHTML += `<div class="marrom"></div>`:modal.innerHTML +=``
-        oneproduto[0].marromcort == true? document.querySelector(".contacab").innerHTML += `<div class="marromcort"></div>`:modal.innerHTML +=``
-        oneproduto[0].bronzefosc == true? document.querySelector(".contacab").innerHTML += `<div class="bronzefosc"></div>`:modal.innerHTML +=``
-        oneproduto[0].ourovelho == true? document.querySelector(".contacab").innerHTML += `<div class="ourovelho"></div>`:modal.innerHTML +=``
-        oneproduto[0].dourado == true? document.querySelector(".contacab").innerHTML += `<div class="dourado"></div>`:modal.innerHTML +=``
-        oneproduto[0].amarelo == true? document.querySelector(".contacab").innerHTML += `<div class="amarelo"></div>`:modal.innerHTML +=``
-        oneproduto[0].vermelho == true? document.querySelector(".contacab").innerHTML += `<div class="vermelho"></div>`:modal.innerHTML +=``
-        oneproduto[0].laranjaneon == true? document.querySelector(".contacab").innerHTML += `<div class="laranjaneon"></div>`:modal.innerHTML +=``
-        oneproduto[0].salmao == true? document.querySelector(".contacab").innerHTML += `<div class="salmao"></div>`:modal.innerHTML +=``
-        oneproduto[0].verdesalvia == true? document.querySelector(".contacab").innerHTML += `<div class="verdesalvia"></div>`:modal.innerHTML +=``
-        oneproduto[0].verdesm == true? document.querySelector(".contacab").innerHTML += `<div class="verdesm"></div>`:modal.innerHTML +=``
-        oneproduto[0].azul == true? document.querySelector(".contacab").innerHTML += `<div class="azul"></div>`:modal.innerHTML +=``
-        oneproduto[0].roxo == true? document.querySelector(".contacab").innerHTML += `<div class="roxo"></div>`:modal.innerHTML +=``
-        oneproduto[0].ameixa == true? document.querySelector(".contacab").innerHTML += `<div class="ameixa"></div>`:modal.innerHTML +=``
-        oneproduto[0].natural == true? document.querySelector(".contacab").innerHTML += `<div class="natural"></div>`:modal.innerHTML +=``
+        oneproduto[0].branco == true? document.querySelector(".contacab").innerHTML += `<div class="branco"><span>Branco</span></div>`:modal.innerHTML +=``
+        oneproduto[0].preto == true? document.querySelector(".contacab").innerHTML += `<div class="preto"><span>Preto</span></div>`:modal.innerHTML +=``
+        oneproduto[0].grafite == true? document.querySelector(".contacab").innerHTML += `<div class="grafite"><span>Grafite</span></div>`:modal.innerHTML +=``
+        oneproduto[0].prata == true? document.querySelector(".contacab").innerHTML += `<div class="prata"><span>Prata</span></div>`:modal.innerHTML +=``
+        oneproduto[0].marrom == true? document.querySelector(".contacab").innerHTML += `<div class="marrom"><span>Marrom</span></div>`:modal.innerHTML +=``
+        oneproduto[0].marromcort == true? document.querySelector(".contacab").innerHTML += `<div class="marromcort"><span>Marrom Cortén</span></div>`:modal.innerHTML +=``
+        oneproduto[0].bronzefosc == true? document.querySelector(".contacab").innerHTML += `<div class="bronzefosc"><span>Bronze Fosco</span></div>`:modal.innerHTML +=``
+        oneproduto[0].ourovelho == true? document.querySelector(".contacab").innerHTML += `<div class="ourovelho"><span>Ouro Velho</span></div>`:modal.innerHTML +=``
+        oneproduto[0].dourado == true? document.querySelector(".contacab").innerHTML += `<div class="dourado"><span>Dourado</span></div>`:modal.innerHTML +=``
+        oneproduto[0].amarelo == true? document.querySelector(".contacab").innerHTML += `<div class="amarelo"><span>Amarelo</span></div>`:modal.innerHTML +=``
+        oneproduto[0].vermelho == true? document.querySelector(".contacab").innerHTML += `<div class="vermelho"><span>Vermelho</span></div>`:modal.innerHTML +=``
+        oneproduto[0].laranjaneon == true? document.querySelector(".contacab").innerHTML += `<div class="laranjaneon"><span>Laranja Neon</span></div>`:modal.innerHTML +=``
+        oneproduto[0].salmao == true? document.querySelector(".contacab").innerHTML += `<div class="salmao"><span>Salmão</span></div>`:modal.innerHTML +=``
+        oneproduto[0].verdesalvia == true? document.querySelector(".contacab").innerHTML += `<div class="verdesalvia"><span>Verde Salvia</span></div>`:modal.innerHTML +=``
+        oneproduto[0].verdesm == true? document.querySelector(".contacab").innerHTML += `<div class="verdesm"><span>Verde Esmeralda</span></div>`:modal.innerHTML +=``
+        oneproduto[0].azul == true? document.querySelector(".contacab").innerHTML += `<div class="azul"><span>Azul</span></div>`:modal.innerHTML +=``
+        oneproduto[0].roxo == true? document.querySelector(".contacab").innerHTML += `<div class="roxo"><span>Roxo</span></div>`:modal.innerHTML +=``
+        oneproduto[0].ameixa == true? document.querySelector(".contacab").innerHTML += `<div class="ameixa"><span>Ameixa</span></div>`:modal.innerHTML +=``
+        oneproduto[0].natural == true? document.querySelector(".contacab").innerHTML += `<div class="natural"><span>Natural</span></div>`:modal.innerHTML +=``
         
 
         var onevaria = await obtainVar(code);

@@ -332,11 +332,41 @@ ul{
  }
 
  .contacab div{
+     
+     display: flex;
+     justify-content: center;
+     align-items: center;
      margin: 5px;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+ }
+
+ .contacab div span {
+    z-index: 1001;
+     opacity: 0;
+     transition: 0.3s ease-out;
+     font-size: 1.2rem;
+     visibility: hidden;
+     color: var(--cor-dark);
+     background-color: var(--cor-bg);
+     border-radius: 10px;
+     padding: 5px;
+     transform: translateY(-45px);
+     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+     border: 1px solid var(--cor-midle);
+ }
+ .contacab div:hover{
+     transform: scale(1.2);
+ }
+
+ .contacab div:hover >span{
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(-35px);
  }
 
  .obter{
@@ -572,3 +602,4 @@ ul{
     background: transparent;
     border: 1px solid rgba(0,0,0,0.3);
 }
+
